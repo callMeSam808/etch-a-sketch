@@ -1,13 +1,16 @@
-const container = document.getElementById("container");
+const container = document.querySelector('#container');
 
-function makeRows(rows, cols) {
-  container.style.setProperty('--grid-rows', rows);
-  container.style.setProperty('--grid-cols', cols);
-  for (c = 0; c < (rows * cols); c++) {
-    let cell = document.createElement("div");
-    cell.innerText = (c + 1);
-    container.appendChild(cell).className = "grid-item";
-  };
-};
+function createGrid(number = 16) {
+  for (y = 1; y <= number; y++) {
+    let row = document.createElement('div');
+    row.id = 'row';
+    container.appendChild(row);
+    for (x = 1; x <= number; x++) {
+      let gridDiv = document.createElement('div');
+      gridDiv.id = 'box';
+      row.appendChild(gridDiv);
+    }
+  }
+}
 
-makeRows(16, 16);
+createGrid();
