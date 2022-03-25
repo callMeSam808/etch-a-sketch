@@ -14,3 +14,11 @@ function createGrid(number = 16) {
 }
 
 createGrid();
+
+const boxes = document.querySelectorAll('#box');
+console.log(boxes);
+for (const box of boxes) {
+  box.addEventListener('mouseover', function(e) {
+    e.target.classList.add('hover');
+  });
+}
