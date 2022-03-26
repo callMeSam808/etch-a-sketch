@@ -8,12 +8,13 @@
 #row {
   display: flex;
   width: 100%;
-  min-height: 25px;
+  height: 15px;
 }
 
 #box {
   border: 1px solid black;
-  min-width: 25px;
+  width: 15px;
+  height: 15px;
 }
 
 .hover {
