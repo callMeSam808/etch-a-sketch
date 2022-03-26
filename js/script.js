@@ -15,7 +15,7 @@ function createGrid(number = 16) {
     box.addEventListener('mouseover', function(e) {
     e.target.classList.add('hover');
   });
-}
+  }
 }
 
 createGrid();
